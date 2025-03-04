@@ -22,7 +22,7 @@ class ContactController extends Controller
             'phone' => request('phone'),
             'message' => request('message')
        ]);
-    Mail::to('saad@gmail.com')->send(new ContactMail(request('name'), request('email'), request('phone'), request('message')));
+    Mail::to('markoagency123@gmail.com')->send(new ContactMail(request('name'), request('email'), request('phone'), request('message')));
 
         return redirect()->back()->with('success', 'تم إرسال الرسالة بنجاح');
     }

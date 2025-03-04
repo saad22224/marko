@@ -638,7 +638,7 @@
             position: fixed;
             bottom: 10px;
             right: 20px;
-            background-color: #34495e;
+            background-color: rgb(0, 119, 255);
             /* لون الخلفية */
             color: #fff;
             /* لون السهم */
@@ -660,7 +660,7 @@
         }
 
         .scroll-to-top:hover {
-            background-color: #aca76d;
+            background-color: #25D366;
             /* تغيير اللون عند التمرير */
             transform: scale(1.1);
             /* تكبير بسيط */
@@ -887,8 +887,7 @@
 
         .services-section {
             padding: 60px 20px;
-            background-color: #f1f1f1;
-            /* لون رمادي فاتح */
+            background-color: #f8f9fa;
             text-align: center;
         }
 
@@ -899,21 +898,59 @@
             font-weight: bold;
         }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
+        /* ✅ المكعبات الأساسية جنب بعض */
+        .main-services {
+            display: flex;
+            gap: 20px;
             justify-content: center;
+            margin-bottom: 30px;
         }
 
+        .main-service-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            width: 45%;
+        }
+
+        .main-service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .main-category-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: rgb(75, 177, 44);
+            margin-bottom: 10px;
+        }
+
+        /* ✅ الخدمات الفرعية تحت كل مكعب */
+        .sub-services {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .sub-services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            max-width: 45%;
+        }
+
+        /* ✅ تنسيق الخدمات الفرعية */
         .service-box {
             background: white;
-            padding: 20px;
+            padding: 15px;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease-in-out;
             text-align: center;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: bold;
             color: #333;
             cursor: pointer;
@@ -924,14 +961,36 @@
         }
 
         .service-box span {
-            font-size: 2rem;
+            font-size: 1.5rem;
         }
 
+        /* ✅ تأثير التحويل عند المرور */
         .service-box:hover {
             background-color: rgb(0, 119, 255);
             color: white;
             transform: translateY(-5px);
         }
+
+        /* ✅ تحسين المسافات في الشاشات الصغيرة */
+        @media (max-width: 768px) {
+            .main-services {
+                flex-direction: column;
+            }
+
+            .main-service-box {
+                width: 100%;
+            }
+
+            .sub-services {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .sub-services-grid {
+                max-width: 100%;
+            }
+        }
+
 
         .why-us-section {
             padding: 60px 20px;
@@ -1003,10 +1062,11 @@
                     </span>
                 </button>
                 <!-- اللوجو في أقصى اليمين -->
-                <a class="navbar-brand" href="#" style="color: #fff; font-size: 1.8rem; font-weight: bold; text-decoration: none;">
+                <a class="navbar-brand" href="#"
+                    style="color: #fff; font-size: 1.8rem; font-weight: bold; text-decoration: none;">
                     MARKO
                 </a>
-                
+
                 <!-- قائمة التنقل -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
@@ -1048,45 +1108,7 @@
                 </a> -->
             </div>
         </header>
-        <!-- عنا -->
-        <!-- <section id="about" class="container py-5">
-            <div class="section-header text-center mb-5 about_texto">
-                <h2 class="display-4 ">من نحن</h2>
-                <p class="lead">
-                    مؤسسة سفراء المستقبل هو أكثر من مجرد اسم. هو بوابة تحوّل طموحاتك إلى
-                    واقع، وخبراتك إلى قصص ملهمة تُروى للعالم.
-                </p>
-            </div>
 
-            <div class="row align-items-center">
-              
-                <div class="col-md-6 text-center mb-4">
-                    <img loading="lazy" src="assets/صورة واتساب بتاريخ 1446-06-16 في 22.01.34_f0d0563b.jpg"
-                        alt="سيرة ذاتية" class="img-fluid rounded-circle about_img" style="max-width: 300px" />
-                </div>
-
-              
-                <div class="col-md-6 about_lang">
-                    <p> نحن أكثر من مجرد محطة لتطوير سيرتك
-                        الذاتية، نحن المنصة الشاملة التي تفتح لك أبواب النجاح. بخدمات مُبتكرة
-                        تُغطي جميع جوانب مسارك المهني، نُعيد تشكيل صورتك الشخصية والمهنية
-                        لتترك أثرًا لا يُنسى، ولتصبح الخيار الأول في عالم مليء بالتنافس</p>
-                    <p>لأننا المكان الوحيد الذي يجمع كل ما تحتاجه لتطوير نفسك مهنيًا وشخصيًا في مكانٍ واحد. من التحليل
-                        العميق لشبكة علاقاتك، إلى إعدادك للفرص الكبرى بثقةٍ وإبداع، خدماتنا هي المفتاح لتُصبح النسخة
-                        الأفضل من نفسك، وتجعل المستقبل يطرق بابك</p>
-                    <p>
-                        نقدم لك خدمات كتابة وتصميم سير ذاتية احترافية بنظام ATS وبأعلى
-                        معايير الجودة لضمان وصولك إلى أهدافك. نوفر لك سعرًا مرنًا ونتائج
-                        تفوق التوقعات.
-                    </p>
-                    <ul>
-                        <li>تصميمات حديثة وعصرية.</li>
-                        <li>ملفات LinkedIn جاهزة للتألق.</li>
-                        <li>رسائل احترافية لبداية ناجحة.</li>
-                    </ul>
-                </div>
-            </div>
-        </section> -->
 
         <section id="about" class="about-section">
             <div class="container">
@@ -1103,7 +1125,7 @@
                             بناء المتاجر الإلكترونية، وتقديم استشارات متخصصة في اختيار المنتجات والموردين.
                         </p>
                     </div>
-                    <div class="about-image"  data-aos="fade-right">
+                    <div class="about-image" data-aos="fade-right">
                         <img src="assets/22.svg" alt="من نحن">
                     </div>
                 </div>
@@ -1113,46 +1135,77 @@
 
 
         <!-- services  -->
+        <!-- Services Section -->
         <section id="services" class="services-section">
             <div class="container">
                 <h2 class="section-title" data-aos="fade-up">خدماتنا</h2>
-                <div class="services-grid" data-aos="fade-down">
-                    <div class="service-box"><span>📢</span> الحملات الإعلانية</div>
-                    <div class="service-box"><span>🎬</span> تصميم الفيديوهات الإعلانية</div>
-                    <div class="service-box"><span>🖼️</span> تصميم البوسترات</div>
-                    <div class="service-box"><span>📱</span> إدارة حسابات السوشيال ميديا</div>
-                    <div class="service-box"><span>🛍️</span> إنشاء متجر إلكتروني</div>
-                    <div class="service-box"><span>📊</span> اختيار المنتجات الرائجة</div>
-                    <div class="service-box"><span>🔗</span> توفير موردين للمنتجات</div>
+
+                <div class="services-container">
+                    <!-- ✅ المكعبات الأساسية جنب بعض -->
+                    <div class="main-services">
+                        <!-- 🟢 مكعب التسويق -->
+                        <div class="main-service-box" data-aos="fade-right">
+                            <h3 class="main-category-title">📢 خدمة التسويق</h3>
+                            <p>نقدم حلولًا متكاملة في التسويق الرقمي لمساعدتك على تحقيق أهدافك.</p>
+                        </div>
+
+                        <!-- 🔵 مكعب التجارة الإلكترونية -->
+                        <div class="main-service-box" data-aos="fade-left">
+                            <h3 class="main-category-title">🛍️ خدمة التجارة الإلكترونية</h3>
+                            <p>نساعدك في إنشاء متجرك الإلكتروني وتحقيق نجاحك في عالم التجارة الإلكترونية.</p>
+                        </div>
+                    </div>
+
+                    <!-- ✅ الخدمات الفرعية تحت كل مكعب -->
+                    <div class="sub-services">
+                        <!-- 🟢 الخدمات الفرعية للتسويق -->
+                        <div class="sub-services-grid" data-aos="fade-up">
+                            <div class="service-box"><span>📢</span> الحملات الإعلانية</div>
+                            <div class="service-box"><span>🎬</span> تصميم الفيديوهات الإعلانية</div>
+                            <div class="service-box"><span>🖼️</span> تصميم البوسترات</div>
+                            <div class="service-box"><span>📱</span> إدارة حسابات السوشيال ميديا</div>
+                        </div>
+
+                        <!-- 🔵 الخدمات الفرعية للتجارة الإلكترونية -->
+                        <div class="sub-services-grid" data-aos="fade-up">
+                            <div class="service-box"><span>🛍️</span> إنشاء متجر إلكتروني</div>
+                            <div class="service-box"><span>📊</span> اختيار المنتجات الرائجة</div>
+                            <div class="service-box"><span>🔗</span> توفير موردين للمنتجات</div>
+                            <div class="service-box"><span>📈</span> تحسين محركات البحث (SEO)</div>
+                            <div class="service-box"><span>💻</span> تصميم مواقع إلكترونية</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
 
 
+
+
         <!-- why us -->
         <section id="why-us" class="why-us-section">
             <div class="container">
-                <h2 class="section-title" style="padding-bottom: 30px;"  data-aos="fade-up-right">لماذا نحن؟</h2>
-                <div class="why-us-grid"  data-aos="flip-left">
+                <h2 class="section-title" style="padding-bottom: 30px;" data-aos="fade-up-right">لماذا نحن؟</h2>
+                <div class="why-us-grid" data-aos="flip-left">
                     <div class="why-box">
                         <i class="ri-lightbulb-line"></i>
-                        <h3>خبرة وكفاءة</h3>
+                        <h3 style="color: rgb(75, 177, 44)" class="head">خبرة وكفاءة</h3>
                         <p>نمتلك فريقاً محترفاً بخبرة طويلة في التسويق والتجارة الإلكترونية.</p>
                     </div>
                     <div class="why-box">
                         <i class="ri-flashlight-line"></i>
-                        <h3>حلول مبتكرة</h3>
+                        <h3 style="color: rgb(75, 177, 44) " class="head">حلول مبتكرة</h3>
                         <p>نقدم استراتيجيات حديثة وتقنيات متطورة لضمان أفضل النتائج.</p>
                     </div>
                     <div class="why-box">
                         <i class="ri-bar-chart-box-line"></i> <!-- أيقونة جديدة -->
-                        <h3>نتائج مضمونة</h3>
+                        <h3 style="color: rgb(75, 177, 44) " class="head">نتائج مضمونة</h3>
                         <p>نعمل على تحقيق أهداف عملك بأعلى كفاءة ودقة.</p>
                     </div>
                     <div class="why-box">
                         <i class="ri-hand-heart-line"></i>
-                        <h3>دعم مستمر</h3>
+                        <h3 style="color: rgb(75, 177, 44) " class="head">دعم مستمر</h3>
                         <p>نوفر استشارات ومتابعة دورية لضمان استمرارية النجاح.</p>
                     </div>
                 </div>
@@ -1162,9 +1215,8 @@
         <!-- سكشن الاتصال بنا -->
         <!-- سكشن الاتصال -->
         <section id="contact" data-aos="zoom-in-left" class="contact-section">
-            @if(session('success'))
-
-            {{session('success')}}
+            @if (session('success'))
+                {{ session('success') }}
             @endif
             <div class="container">
                 <div class="contact-content">
@@ -1173,11 +1225,12 @@
                         نحن هنا لمساعدتك! لا تتردد في التواصل معنا لأي استفسار أو طلب. سنكون سعداء بالرد عليك في أقرب
                         وقت.
                     </p>
-                    <form class="contact-form" action="{{route('contact')}}" method="POST">
+                    <form class="contact-form" action="{{ route('contact') }}" method="POST">
                         @csrf
                         <input type="text" name="name" placeholder="الاسم الكامل" required>
                         <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-                        <input type="tel" name="phone" placeholder="رقم الهاتف" required>
+                        <input type="tel" name="phone" style="    direction: rtl;  /* محاذاة النصوص للاتجاه العربي */
+    text-align: right;" placeholder="رقم الهاتف" required>
                         <textarea placeholder="اكتب رسالتك هنا..." rows="5" required name="message"></textarea>
                         <button type="submit">إرسال</button>
                     </form>
@@ -1274,42 +1327,44 @@
     </div>
     <footer class="footer">
         <p>
-            All Rights Reserved &copy; 2025 By 
-            <a href="https://wa.me/+201556477029" target="_blank" class="footer-link">Eng: Saad Harera</a> 
-            
+            All Rights Reserved &copy; 2025 By
+            <a href="https://wa.me/+201556477029" target="_blank" class="footer-link">Eng: Saad Harera</a>
+
         </p>
     </footer>
-    
+
     <style>
-    /* تنسيق الفوتر */
-    .footer {
-        background: #f1f1f1;
-        text-align: center;
-        padding: 15px 10px;
-        font-size: 1rem;
-        color: #333;
-    }
-    
-    /* تنسيق الرابط */
-    .footer-link {
-        color: #0077ff; /* لون الموقع المميز */
-        text-decoration: none;
-        font-weight: bold;
-        transition: 0.3s;
-    }
-    
-    .footer-link:hover {
-        text-decoration: underline;
-        color: #005bb5; /* لون أغمق عند التحويل */
-    }
+        /* تنسيق الفوتر */
+        .footer {
+            background: #f1f1f1;
+            text-align: center;
+            padding: 15px 10px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* تنسيق الرابط */
+        .footer-link {
+            color: #0077ff;
+            /* لون الموقع المميز */
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+            color: #005bb5;
+            /* لون أغمق عند التحويل */
+        }
     </style>
-    
-    <div class="fixed-container">
+
+    {{-- <div class="fixed-container">
         <a href="https://wa.me/+966539910897" target="_blank" class="whatsapp-button">
             <i class="ri-whatsapp-line"></i> <!-- أيقونة واتساب -->
         </a>
         <span>إضغط لإستشارتك المجانية</span>
-    </div>
+    </div> --}}
     <!--~~~~~~~~~~~~~~~ Scroll Up ~~~~~~~~~~~~~~~-->
     <div class="scroll-to-top kolo" style="display: none">
         <i class="ri-arrow-up-line"></i>
@@ -1324,14 +1379,14 @@
     <script>
         const scrollbtn = document.querySelector(".kolo");
         window.addEventListener("scroll", () => {
-            if (scrollY >= 2500) {
+            if (scrollY >= 2000) {
                 scrollbtn.style.display = "block";
             } else {
                 scrollbtn.style.display = "none";
             }
         });
 
-        scrollbtn.onclick = function () {
+        scrollbtn.onclick = function() {
             window.scrollTo({
                 top: 0,
                 left: 0,
