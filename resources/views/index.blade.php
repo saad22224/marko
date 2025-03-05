@@ -1125,7 +1125,7 @@
         <header class="hero-section d-flex justify-content-center align-items-center text-center">
             <div class="container hero__text" data-aos="fade-up">
                 <h1 class="hero-title"> ماركو</h1>
-                <p class="hero-subtitle">
+                <p class="hero-subtitle" style="font-size: 1.5rem; color: #007bff;">
                     تطوير أعمالك يبدأ بخطــــوة
                 </p>
                 <p>خطوتك الأولى نحو النجاح تبدأ من هنا</p>
@@ -1133,7 +1133,6 @@
                 </a> -->
             </div>
         </header>
-
 
         <section id="about" class="about-section">
             <div class="container">
