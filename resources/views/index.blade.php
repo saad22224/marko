@@ -985,25 +985,34 @@
             transform: translateY(-5px);
         }
 
-        /* ✅ تحسين المسافات في الشاشات الصغيرة */
-        @media (max-width: 768px) {
-            .main-services {
-                flex-direction: column;
-            }
+/* ✅ تحسين التصميم لشاشات الهواتف */
+@media (max-width: 768px) {
+    .main-services {
+        flex-direction: column;
+        gap: 15px;
+    }
 
-            .main-service-box {
-                width: 100%;
-            }
+    .main-service-box1, .main-service-box2 {
+        width: 100%;
+        padding: 40px;
+    }
 
-            .sub-services {
-                flex-direction: column;
-                gap: 10px;
-            }
+    .sub-services {
+        flex-direction: column;
+        align-items: center;
+    }
 
-            .sub-services-grid {
-                max-width: 100%;
-            }
-        }
+    .sub-services-grid {
+        max-width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .service-box {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+}
+
 
         .main-category-title {
         display: flex;
@@ -1335,7 +1344,7 @@
             }
 
             .contact-form button:hover {
-                background: #005bb5;
+                background: rgb(75, 177, 44);
             }
 
             /* استجابة للشاشات الصغيرة */
