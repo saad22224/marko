@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>خدمات كتابة السيرة الذاتية</title>
+    <title>   marko</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Dancing+Script:wght@400..700&family=Oleo+Script:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="preload" href="assets/pexels-sora-shimazaki-5673502.jpg" as="image">
-    <link rel="shortcut icon" href="assets/صورة واتساب بتاريخ 1446-06-16 في 20.13.52_116b222c_preview_rev_1.png"
+    <link rel="shortcut icon" href="assets\mark-konig-Tl8mDaue_II-unsplash.jpg"
         type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="">
@@ -887,7 +887,7 @@
 
         .services-section {
             padding: 60px 20px;
-            background-color: #f8f9fa;
+            background-color: #fff;
             text-align: center;
         }
 
@@ -991,7 +991,18 @@
             }
         }
 
-
+        .main-category-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .service-img {
+        width: 130px;
+        height: 130px;
+        border-radius: 10%;
+        object-fit: cover;
+    }
         .why-us-section {
             padding: 60px 20px;
             background-color: #f2f2f2 !important;
@@ -1139,34 +1150,34 @@
         <section id="services" class="services-section">
             <div class="container">
                 <h2 class="section-title" data-aos="fade-up">خدماتنا</h2>
-
+        
                 <div class="services-container">
-                    <!-- ✅ المكعبات الأساسية جنب بعض -->
                     <div class="main-services">
                         <!-- 🟢 مكعب التسويق -->
                         <div class="main-service-box" data-aos="fade-right">
-                            <h3 class="main-category-title">📢 خدمة التسويق</h3>
+                            <h3 class="main-category-title">
+                                <img src="assets/lukas-blazek-mcSDtbWXUZU-unsplash.jpg" alt="تسويق" class="service-img"> خدمة التسويق
+                            </h3>
                             <p>نقدم حلولًا متكاملة في التسويق الرقمي لمساعدتك على تحقيق أهدافك.</p>
                         </div>
-
+        
                         <!-- 🔵 مكعب التجارة الإلكترونية -->
                         <div class="main-service-box" data-aos="fade-left">
-                            <h3 class="main-category-title">🛍️ خدمة التجارة الإلكترونية</h3>
+                            <h3 class="main-category-title">
+                                <img src="assets\mark-konig-Tl8mDaue_II-unsplash.jpg" alt="تجارة إلكترونية" class="service-img"> خدمة التجارة الإلكترونية
+                            </h3>
                             <p>نساعدك في إنشاء متجرك الإلكتروني وتحقيق نجاحك في عالم التجارة الإلكترونية.</p>
                         </div>
                     </div>
-
-                    <!-- ✅ الخدمات الفرعية تحت كل مكعب -->
+        
                     <div class="sub-services">
-                        <!-- 🟢 الخدمات الفرعية للتسويق -->
                         <div class="sub-services-grid" data-aos="fade-up">
                             <div class="service-box"><span>📢</span> الحملات الإعلانية</div>
                             <div class="service-box"><span>🎬</span> تصميم الفيديوهات الإعلانية</div>
                             <div class="service-box"><span>🖼️</span> تصميم البوسترات</div>
                             <div class="service-box"><span>📱</span> إدارة حسابات السوشيال ميديا</div>
                         </div>
-
-                        <!-- 🔵 الخدمات الفرعية للتجارة الإلكترونية -->
+        
                         <div class="sub-services-grid" data-aos="fade-up">
                             <div class="service-box"><span>🛍️</span> إنشاء متجر إلكتروني</div>
                             <div class="service-box"><span>📊</span> اختيار المنتجات الرائجة</div>
