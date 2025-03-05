@@ -15,6 +15,7 @@
         type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -865,7 +866,7 @@
 
         .about-image img {
             width: 100%;
-            max-width: 450px;
+            max-width: 300px;
             object-fit: cover;
             background: none;
             border: none;
@@ -906,7 +907,7 @@
             margin-bottom: 30px;
         }
 
-        .main-service-box {
+        .main-service-box1 {
             background: white;
             padding: 30px;
             border-radius: 15px;
@@ -914,6 +915,19 @@
             text-align: center;
             transition: all 0.3s ease-in-out;
             width: 45%;
+            background-image: url('assets/lukas-blazek-mcSDtbWXUZU-unsplash.jpg');
+            background-size: cover;
+        }
+        .main-service-box2 {
+            background: white;
+            padding: 60px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            width: 45%;
+            background-image: url('assets/mark-konig-Tl8mDaue_II-unsplash.jpg');
+            background-size: cover;
         }
 
         .main-service-box:hover {
@@ -997,12 +1011,12 @@
         justify-content: center;
         gap: 10px;
     }
-    .service-img {
+    /* .service-img {
         width: 130px;
         height: 130px;
         border-radius: 10%;
         object-fit: cover;
-    }
+    } */
         .why-us-section {
             padding: 60px 20px;
             background-color: #f2f2f2 !important;
@@ -1125,19 +1139,21 @@
             <div class="container">
                 <div class="about-content">
                     <div class="about-text" data-aos="fade-left">
-                        <h2 class="section-title">من نحن</h2>
-                        <p>
-                            نحن في <strong>ماركو</strong> نقدم حلولًا متكاملة في مجالي التسويق والتجارة الإلكترونية،
-                            لمساعدة الشركات والأفراد على تحقيق نجاحهم الرقمي.
+                        <h2 class="section-title" style="font-weight: bold; font-size: 35px !important;">من نحن</h2>
+                        <p style="line-height: 1.8; font-size: 23px; font-weight: 500; color: #333;">
+                            نحن في <strong style="color: #007bff;">ماركو</strong> نقدم حلولًا متكاملة في مجالي التسويق والتجارة الإلكترونية، 
+                            لمساعدة الشركات والأفراد على تحقيق نجاحهم الرقمي.  
                             نسعى لتقديم خدمات عالية الجودة من خلال استراتيجيات مبتكرة وتقنيات حديثة.
                         </p>
-                        <p>
-                            خبرتنا في السوق تضمن لك تحقيق نتائج فعالة في إدارة الحملات الإعلانية،
+                        
+                        <p style="line-height: 1.8; font-size: 23px; font-weight: 500; color: #333;">
+                            خبرتنا في السوق تضمن لك تحقيق نتائج فعالة في إدارة الحملات الإعلانية، 
                             بناء المتاجر الإلكترونية، وتقديم استشارات متخصصة في اختيار المنتجات والموردين.
                         </p>
+                        
                     </div>
                     <div class="about-image" data-aos="fade-right">
-                        <img src="assets/22.svg" alt="من نحن">
+                        <img src="assets\صورة واتساب بتاريخ 1446-09-06 في 00.00.05_bd2ee232.jpg" alt="من نحن">
                     </div>
                 </div>
             </div>
@@ -1154,17 +1170,17 @@
                 <div class="services-container">
                     <div class="main-services">
                         <!-- 🟢 مكعب التسويق -->
-                        <div class="main-service-box" data-aos="fade-right">
+                        <div class="main-service-box1" data-aos="fade-right">
                             <h3 class="main-category-title">
-                                <img src="assets/lukas-blazek-mcSDtbWXUZU-unsplash.jpg" alt="تسويق" class="service-img"> خدمة التسويق
+                                خدمة التسويق
                             </h3>
                             <p>نقدم حلولًا متكاملة في التسويق الرقمي لمساعدتك على تحقيق أهدافك.</p>
                         </div>
         
                         <!-- 🔵 مكعب التجارة الإلكترونية -->
-                        <div class="main-service-box" data-aos="fade-left">
+                        <div class="main-service-box2" data-aos="fade-left">
                             <h3 class="main-category-title">
-                                <img src="assets\mark-konig-Tl8mDaue_II-unsplash.jpg" alt="تجارة إلكترونية" class="service-img"> خدمة التجارة الإلكترونية
+                                خدمة التجارة الإلكترونية
                             </h3>
                             <p>نساعدك في إنشاء متجرك الإلكتروني وتحقيق نجاحك في عالم التجارة الإلكترونية.</p>
                         </div>
@@ -1336,13 +1352,13 @@
         </style>
 
     </div>
-    <footer class="footer">
+    <footer class="footer" style="background-color: #f8f9fa; padding: 15px; text-align: center; font-size: 16px; color: #333; font-weight: 500;">
         <p>
-            All Rights Reserved &copy; 2025 By
-            <a href="https://wa.me/+201556477029" target="_blank" class="footer-link">Eng: Saad Harera</a>
-
+            جميع الحقوق محفوظة &copy; 2025 <strong style="color: #007bff;">شركة ماركو</strong>
         </p>
     </footer>
+    
+    
 
     <style>
         /* تنسيق الفوتر */
